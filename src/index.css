@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --neon-blue: #00ffff;
+  --neon-pink: #ff00ff;
+  --neon-green: #00ff00;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #0a0a0a;
+  color: #ffffff;
+}
+
+.neon-text {
+  text-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue);
+}
+
+.neon-border {
+  box-shadow: 0 0 5px var(--neon-pink), 0 0 10px var(--neon-pink);
+}
+
+@keyframes neon-glow {
+  0% {
+    text-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue);
+  }
+  50% {
+    text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue), 0 0 30px var(--neon-blue);
+  }
+  100% {
+    text-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue);
+  }
+}
+
+.animate-neon {
+  animation: neon-glow 2s ease-in-out infinite;
+}
